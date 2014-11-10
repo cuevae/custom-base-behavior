@@ -1,8 +1,8 @@
 {
-  "name"  : "cuevae/custom-base-behavior",
-  "type"  : "propel-behavior",
-  "extra" : {
-	"name"  : "custom_base",
-	"class" : "src/CustomBaseBehaviour"
-  }
+    "name"  : "cuevae/custom-base-behavior",
+    "type"  : "propel-behavior",
+    "extra" : {
+        "name"  : "custom_base",
+        "class" : "src/CustomBaseBehaviour"
+    }
 }
