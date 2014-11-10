@@ -3,6 +3,6 @@
     "type"  : "propel-behavior",
     "extra" : {
         "name"  : "custom_base",
-        "class" : "src/CustomBaseBehaviour"
+        "class" : "\\cuevae\\behaviors\\CustomBaseBehaviour"
     }
 }
