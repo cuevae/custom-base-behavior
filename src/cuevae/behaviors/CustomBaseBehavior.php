@@ -11,10 +11,12 @@ class CustomBaseBehavior extends Behavior
         'base_peer' => '',
         'base_query' => 'ModelCriteria',
     );
+
     protected function cleanFullyQualifiedClassName($fullyQualifiedClassName)
     {
         return trim(str_replace(array('.', '/'), '\\', $fullyQualifiedClassName), '\\');
     }
+
     protected function getClassName($fullyQualifiedClassName)
     {
         $className = $fullyQualifiedClassName;
@@ -24,6 +26,7 @@ class CustomBaseBehavior extends Behavior
         }
         return $className;
     }
+
     public function parentClass($builder)
     {
         switch (get_class($builder)) {
@@ -45,4 +48,5 @@ class CustomBaseBehavior extends Behavior
             return $this->getClassName($class);
         }
     }
+    
 }
