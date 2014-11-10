@@ -48,5 +48,5 @@ class CustomBaseBehavior extends Behavior
             return $this->getClassName($class);
         }
     }
-    
+
 }
