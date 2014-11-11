@@ -1,6 +1,6 @@
 <?php
 
-namespace cuevae\propel\behavior\custombase;
+namespace Propel\Generator\Behaviour\Custom;
 
 use Propel\Generator\Model\Behavior;
 

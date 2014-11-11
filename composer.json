@@ -4,8 +4,11 @@
     "license" : "MIT",
     "autoload" : {
         "psr-0": {
-            "cuevae\\propel\\behaviour\\custombase" : "src"
-        }
+            "" : "src/"
+        },
+        "classmap" : [
+            "src/cuevae/propel/behavior/custombase/"
+        ]
     },
     "require" : {
         "php" : ">=5.4",
