@@ -14,40 +14,40 @@ class CustomBaseBehavior extends Behavior
         'base_query' => 'ModelCriteria',
     );
 
-    protected function cleanFullyQualifiedClassName($fullyQualifiedClassName)
+    protected function cleanFullyQualifiedClassName( $fullyQualifiedClassName )
     {
-        return trim(str_replace(array('.', '/'), '\\', $fullyQualifiedClassName), '\\');
+        return trim( str_replace( array( '.', '/' ), '\\', $fullyQualifiedClassName ), '\\' );
     }
 
-    protected function getClassName($fullyQualifiedClassName)
+    protected function getClassName( $fullyQualifiedClassName )
     {
         $className = $fullyQualifiedClassName;
-        if (($pos = strrpos($fullyQualifiedClassName, '\\')) !== false) {
-            $className = substr($fullyQualifiedClassName, $pos + 1);
-            $namespace = substr($fullyQualifiedClassName, 0, $pos);
+        if(( $pos = strrpos( $fullyQualifiedClassName, '\\' ) ) !== false){
+            $className = substr( $fullyQualifiedClassName, $pos + 1 );
+            $namespace = substr( $fullyQualifiedClassName, 0, $pos );
         }
         return $className;
     }
 
-    public function parentClass($builder)
+    public function parentClass( $builder )
     {
-        switch (get_class($builder)) {
+        switch(get_class( $builder )){
             case 'PHP5PeerBuilder':
-                $class = $this->getParameter('base_peer');
+                $class = $this->getParameter( 'base_peer' );
                 break;
 
             case 'QueryBuilder':
-                $class = $this->getParameter('base_query');
+                $class = $this->getParameter( 'base_query' );
                 break;
 
             case 'PHP5ObjectBuilder':
-                $class = $this->getParameter('base_object');
+                $class = $this->getParameter( 'base_object' );
                 break;
         }
-        if (!empty($class)) {
-            $class = $this->cleanFullyQualifiedClassName($class);
-            $builder->declareClass($class);
-            return $this->getClassName($class);
+        if(!empty( $class )){
+            $class = $this->cleanFullyQualifiedClassName( $class );
+            $builder->declareClass( $class );
+            return $this->getClassName( $class );
         }
     }
 
