@@ -9,8 +9,7 @@ class BaseBehavior extends Behavior
 
     // default parameters value
     protected $parameters = array(
-        'base_object' => 'BaseObject',
-        'base_peer' => '',
+        'base_object' => '',
         'base_query' => 'ModelCriteria',
     );
 
@@ -32,15 +31,12 @@ class BaseBehavior extends Behavior
     public function parentClass( $builder )
     {
         switch(get_class( $builder )){
-            case 'PHP5PeerBuilder':
-                $class = $this->getParameter( 'base_peer' );
-                break;
 
-            case 'QueryBuilder':
+            case 'Propel\Generator\Builder\Om\QueryBuilder':
                 $class = $this->getParameter( 'base_query' );
                 break;
 
-            case 'PHP5ObjectBuilder':
+            case 'Propel\Generator\Builder\Om\ObjectBuilder':
                 $class = $this->getParameter( 'base_object' );
                 break;
         }
@@ -52,5 +48,4 @@ class BaseBehavior extends Behavior
 
         }
     }
-    
 }
