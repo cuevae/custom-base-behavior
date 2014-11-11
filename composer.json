@@ -1,8 +1,18 @@
 {
     "name"  : "cuevae/custom-base-behavior",
     "type"  : "propel-behavior",
+    "license" : "MIT",
+    "autoload" : {
+        "psr-0": {
+            "cuevae\\propel\\behaviour\\custombase" : "src"
+        }
+    },
+    "require" : {
+        "php" : ">=5.4",
+        "propel/propel" : "dev-master@dev"
+    },
     "extra" : {
         "name"  : "custom_base",
-        "class" : "\\Propel\\Behavior\\Cuevae\\CustomBaseBehavior"
+        "class" : "\\cuevae\\propel\\behavior\\custombase\\CustomBaseBehavior"
     }
 }

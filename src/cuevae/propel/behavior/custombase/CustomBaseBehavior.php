@@ -1,6 +1,8 @@
 <?php
 
-namespace cuevae\behaviors;
+namespace cuevae\propel\behavior\custombase;
+
+use Propel\Generator\Model\Behavior;
 
 class CustomBaseBehavior extends Behavior
 {
