@@ -1,21 +1,18 @@
 {
-    "name"  : "cuevae/propel-custombase-behavior",
-    "type"  : "propel-behavior",
-    "license" : "MIT",
-    "autoload" : {
-        "psr-0": {
-            "" : "src/"
-        },
-        "classmap" : [
-            "src/cuevae/propel/behavior/custombase/"
-        ]
-    },
-    "require" : {
-        "php" : ">=5.4",
-        "propel/propel" : "dev-master@dev"
-    },
-    "extra" : {
-        "name"  : "custombase",
-        "class" : "\\cuevae\\propel\\behavior\\custombase\\CustomBaseBehavior"
-    }
+	"name" : "cuevae/propel-base-behavior",
+	"type" : "propel-behavior",
+	"license" : "MIT",
+	"autoload" : {
+		"psr-0" : {
+			"cuevae\\propel\\behavior\\base" : "src"
+		}
+	},
+	"require" : {
+		"php" : ">=5.4",
+		"propel/propel" : "dev-master@dev"
+	},
+	"extra" : {
+		"name" : "base",
+		"class" : "\\cuevae\\propel\\behavior\\base\\BaseBehavior"
+	}
 }

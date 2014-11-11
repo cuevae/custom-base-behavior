@@ -1,10 +1,10 @@
 <?php
 
-namespace Propel\Generator\Behaviour\Custom;
+namespace cuevae\propel\behavior\base;
 
 use Propel\Generator\Model\Behavior;
 
-class CustomBaseBehavior extends Behavior
+class BaseBehavior extends Behavior
 {
 
     // default parameters value
@@ -48,7 +48,6 @@ class CustomBaseBehavior extends Behavior
             $class = $this->cleanFullyQualifiedClassName( $class );
             $builder->declareClass( $class );
             return $this->getClassName( $class );
-        }
-    }
 
-}
+
+        }
